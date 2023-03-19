@@ -1,0 +1,43 @@
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+BankQuestionEntity _$BankQuestionEntityFromJson(Map<String, dynamic> json) =>
+    BankQuestionEntity(
+      discription: json['discription'] as String,
+      rating: json['rating'] as String?,
+      answerList: (json['answerList'] as List<dynamic>)
+          .map((e) => e as String)
+          .toList(),
+      isCheck: json['isCheck'] as bool?,
+      docId: json['docId'] as String?,
+      imageUrl: json['imageUrl'] as String?,
+      imageName: json['imageName'] as String?,
+      descriptionImageUrl: json['descriptionImageUrl'] as String?,
+      descriptionImageName: json['descriptionImageName'] as String?,
+      correctAnswerIndex: json['correctAnswerIndex'] as int,
+      details: json['details'] as String,
+      reference: json['reference'] as String,
+      module: json['module'] as String,
+      topic: json['topic'] as String,
+      subject: json['subject'] as String,
+    );
+
+Map<String, dynamic> _$BankQuestionEntityToJson(BankQuestionEntity instance) =>
+    <String, dynamic>{
+      'discription': instance.discription,
+      'answerList': instance.answerList,
+      'correctAnswerIndex': instance.correctAnswerIndex,
+      'details': instance.details,
+      'isCheck': instance.isCheck,
+      'reference': instance.reference,
+      'module': instance.module,
+      'topic': instance.topic,
+      'subject': instance.subject,
+      'docId': instance.docId,
+      'imageUrl': instance.imageUrl,
+      'imageName': instance.imageName,
+      'descriptionImageUrl': instance.descriptionImageUrl,
+      'descriptionImageName': instance.descriptionImageName,
+      'rating': instance.rating,
+    };
